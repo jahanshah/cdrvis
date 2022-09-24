@@ -5,7 +5,7 @@ data <- getData(input_file = "data/TCGA-CDR-SupplementalTableS1.xlsx")
 if (interactive()) {
 
 ui <- fluidPage(
-  titlePanel("Overal Survival in Cancer"),
+  titlePanel("Overall Survival in Cancer"),
   sidebarLayout(
     sidebarPanel(
 
