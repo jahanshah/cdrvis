@@ -1,4 +1,4 @@
-# **cdrvis: Overall survival in cancer visualization package - Quick Start**
+# **cdrvis: Overall survival in cancer - Quick Start**
 
 ## **Table of contents**
 1. [Overview](#p1)
@@ -53,6 +53,14 @@ The devtools package provides install_github() that enables installing packages 
     devtools::install_github("jahanshah/cdrvis")
     library(cdrvis)
 
+Or alternatively:
+
+    git clone https://github.com/jahanshah/cdrvis.git
+    cd cdrvis
+    R
+    devtools::load_all()
+    library(cdrvis)
+    
 ### **3.2. Function usage** <a name="p3.2"></a>
 #### **3.2.1 getData()** <a name="p3.2.1"></a>
 Only argument is an excel spreadsheet with the data in the first sheet.
@@ -65,8 +73,11 @@ Only argument is an excel spreadsheet with the data in the first sheet.
     getPlot(data = data, patient_id = 'TTCGA-5N-A9KM|TCGA-BL-A0C8|TCGA-BL-A13I|TCGA-BL-A13J')
 #### **3.2.3 getContrasts()** <a name="p3.2.3"></a>
 Only `t.test` or `wilcox.test` methods are available.
+
     getContrasts(data = data, test.method = c("t.test", "wilcox.test"))
 ### **3.3. Shiny app usage** <a name="p3.3"></a>
+To run the package interactively with tunning options for selecting samples and statistical test.
+
     runApp()
 ### **4. Expected Outputs** <a name="p4"></a>
  The above command will provide the outputs as listed below:
